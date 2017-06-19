@@ -9,7 +9,6 @@ class ContactsController < ApplicationController
     
     def create
      @contact = Contact.create(contacts_params)
-        
      if @contact.save
         redirect_to root_path, notice: "お問い合わせ完了しました！"
         
