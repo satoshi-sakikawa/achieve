@@ -8,7 +8,7 @@ class QuestionMailer < ApplicationMailer
   def sendmail_contact(contact)
     @contact = contact
 
-    mail to: "stayspike@gmail.com",
+    mail to: contact.email,
       subject:'お問い合わせ'
   end
 end
