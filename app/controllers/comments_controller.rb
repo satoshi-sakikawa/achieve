@@ -17,7 +17,6 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment = Comment.find(params[:id])
-    @comment.destroy
     @blog = @comment.blog
    respond_to do |format|
            if @comment.destroy
