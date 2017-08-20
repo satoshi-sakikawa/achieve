@@ -17,6 +17,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :blogs do
+  resources :comments
+  post :confirm, on: :collection
+  end
+
   resources :poems, only: [:index, :show]
 
    root 'top#index'
